@@ -73,3 +73,13 @@ Your app should now be running on [localhost:3000](http://localhost:3000/).
 ## Vercel, Next.js Commerce, and Shopify Integration Guide
 
 You can use this comprehensive [integration guide](https://vercel.com/docs/integrations/ecommerce/shopify) with step-by-step instructions on how to configure Shopify as a headless CMS using Next.js Commerce as your headless Shopify storefront on Vercel.
+
+## Recently Viewed Products Feature
+
+This feature enhances the user experience by tracking and displaying recently viewed products. It consists of three main components:
+
+1. `use-recently-viewed.ts` - A custom hook that manages the recently viewed products state using localStorage
+2. `recently-viewed-products.tsx` - The main component that displays the recently viewed products
+3. `product-tracker.tsx` - A client component that tracks product views
+
+For more details about the implementation, see the [README in the components directory](components/recently-viewed/README.md).
