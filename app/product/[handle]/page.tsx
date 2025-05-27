@@ -6,6 +6,8 @@ import Footer from 'components/layout/footer';
 import { Gallery } from 'components/product/gallery';
 import { ProductProvider } from 'components/product/product-context';
 import { ProductDescription } from 'components/product/product-description';
+import { ProductTracker } from 'components/recently-viewed/product-tracker';
+import { RecentlyViewedProducts } from 'components/recently-viewed/recently-viewed-products';
 import { HIDDEN_PRODUCT_TAG } from 'lib/constants';
 import { getProduct, getProductRecommendations } from 'lib/shopify';
 import { Image } from 'lib/shopify/types';
@@ -103,9 +105,13 @@ export default async function ProductPage(props: { params: Promise<{ handle: str
             </Suspense>
           </div>
         </div>
+        <div className="mt-8">
+          <RecentlyViewedProducts />
+        </div>
         <RelatedProducts id={product.id} />
       </div>
       <Footer />
+      <ProductTracker product={product} />
     </ProductProvider>
   );
 }
